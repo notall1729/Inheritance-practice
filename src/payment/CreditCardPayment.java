@@ -9,10 +9,12 @@ public class CreditCardPayment implements PaymentStrategy{
         this.cardNumber = cardNumber;
         this.cardHolderName = cardHolderName;
     }
+
     @Override
     public void pay(double amount){
         System.out.println("Paid " + amount + " using Credit Card.");
     }
+
     @Override
     public String getPaymentDetails(){
         return "Credit Card: " + cardNumber + ", Holder: " + cardHolderName;

@@ -2,19 +2,23 @@ import payment.*;
 
 public class Main {
     public static void main(String[] args) {
+        //add customers
         RegularCustomer regularCustomer1 = new RegularCustomer("Fatemeh");
         RegularCustomer regularCustomer2 = new RegularCustomer("Aryan");
         PremiumCustomer premiumCustomer = new PremiumCustomer("Hananeh");
 
+        //add payment strategies
         PayPalPayment payPalPayment = new PayPalPayment("Hananeh6778@gmail.com");
         BitcoinPayment bitcoinPayment = new BitcoinPayment("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
         CreditCardPayment creditCardPayment = new CreditCardPayment("1234 5678 9012 3456", "Areyan Karimi");
 
+        //print customers information
         regularCustomer1.displayCustomerInfo();
         regularCustomer2.displayCustomerInfo();
         premiumCustomer.displayCustomerInfo();
         printLine();
 
+        //pay
         regularCustomer1.makePayment(bitcoinPayment,2000000);
         regularCustomer1.makePayment(bitcoinPayment, 500000);
         regularCustomer2.makePayment(creditCardPayment, 7000000);
@@ -23,6 +27,7 @@ public class Main {
         premiumCustomer.makePayment(payPalPayment, 8690000);
         printLine();
 
+        //show payment Histories
         regularCustomer1.showPaymentHistory();
         printLine();
 
