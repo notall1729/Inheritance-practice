@@ -13,7 +13,7 @@ public Customer(String name){
     public abstract void displayCustomerInfo();
      public void makePayment(PaymentStrategy paymentStrategy, double amount){
      paymentStrategy.pay(amount);
-     paymentHistory.add("Amount: " + amount + "by" + paymentStrategy.getPaymentDetails());
+     paymentHistory.add("Amount: " + amount + " by " + paymentStrategy.getPaymentDetails());
      paymentHistory.add(paymentStrategy.getPaymentDetails());
      }
 
